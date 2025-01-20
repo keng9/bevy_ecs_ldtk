@@ -381,3 +381,11 @@ pub struct LdtkWorldBundle {
     pub inherited_visibility: InheritedVisibility,
     pub view_visibility: ViewVisibility,
 }
+
+/// [Component] for storing the size of a tileset.
+#[derive(Clone, Eq, PartialEq, Debug, Default, Hash, Component, Reflect)]
+#[reflect(Component)]
+pub struct TilesetSize {
+    pub width: i32,
+    pub height: i32,
+}

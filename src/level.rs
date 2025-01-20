@@ -709,6 +709,13 @@ pub fn spawn_level(
                         .insert(LayerMetadata::from(layer_instance))
                         .insert(Name::new(layer_instance.identifier.to_owned()));
 
+                    if let Some(tileset_definition) = tileset_definition {
+                        commands.entity(layer_entity).insert(TilesetSize {
+                            width: tileset_definition.c_wid,
+                            height: tileset_definition.c_hei,
+                        });
+                    }
+
                     commands.entity(ldtk_entity).add_child(layer_entity);
 
                     layer_z += 1;

@@ -79,6 +79,7 @@ impl Plugin for LdtkPlugin {
             .register_type::<components::GridCoords>()
             .register_type::<components::TileMetadata>()
             .register_type::<components::TileEnumTags>()
-            .register_type::<components::LayerMetadata>();
+            .register_type::<components::LayerMetadata>()
+            .register_type::<components::TilesetSize>();
     }
 }
